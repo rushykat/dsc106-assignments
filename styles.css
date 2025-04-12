@@ -33,7 +33,6 @@ nav a.current {
 :root {
     /* --color-accent: oklch(60% 20% 300); */
     /* --color-accent: oklch(0.86 0.1459 96.49); */
-
     --color-accent: oklch(80% 15% 290);
 }
 
@@ -44,7 +43,6 @@ html {
 nav a:hover {
     border-bottom: 0.4em solid var(--color-accent);
     background-color: oklch(from var(--color-accent) 95% 5% h);
-
 }
 
 label, input, textarea, button {
@@ -92,4 +90,45 @@ h1 {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
+}  
+
+.resume section h2 {
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid black;
+}
+
+.resume section > h2 {
+    text-align: center;
+    font-size: 175%;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.resume article h3 {
+    margin-bottom: 0.1em;
+}
+.resume article p {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.resume article .event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume article .event time {
+    font-weight: bold;
+}
+
+.resume-info p {
+    display: inline;
+    margin-inline: 1em;
+}
+
+.resume-info {
+    text-align: center;
 }
