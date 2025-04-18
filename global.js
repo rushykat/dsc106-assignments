@@ -25,7 +25,7 @@ let pages = [
 let nav = document.createElement("nav");
 document.body.prepend(nav);
 
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "/" : "/website/";
+const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "/" : "/portfolio/";
 
 for (let p of pages) {
     let url = p.url;
@@ -84,6 +84,5 @@ form?.addEventListener("submit", function (event) {
         console.log(name, encodeURIComponent(value));
         url += `${encodeURIComponent(name)}=${encodeURIComponent(value)}&`;
     }
-    // console.log(url);
     location.href = url;
 })
