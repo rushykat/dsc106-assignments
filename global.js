@@ -86,3 +86,36 @@ form?.addEventListener("submit", function (event) {
     }
     location.href = url;
 })
+
+export async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            console.log(response);
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching or parsing JSON data:", error);
+    }
+}
+
+export function renderProjects(project, containerElement, headingLevel = "h2") {
+    if (!containerElement) {
+        return;
+    }
+    containerElement.innerHTML = "";
+    for (let proj of project) {
+        const article = document.createElement("article");
+        const title = proj?.title;
+        const image = proj?.image;
+        const description = proj?.description;
+        article.innerHTML = `
+            <${headingLevel}>${title}</${headingLevel}>
+            <img src="${image}" alt="${title}">
+            <p>${description}</p>
+        `;
+        containerElement.appendChild(article);
+    }
+}
