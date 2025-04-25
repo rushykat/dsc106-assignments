@@ -149,3 +149,19 @@ img {
     right: 1rem;
     font-size: 0.8rem;
 }
+
+#profile-stats dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#profile-stats dt {
+    grid-row: 1;
+    font-weight: 500;
+}
+
+#profile-stats dd {
+    grid-row: 2;
+    margin: 0;
+    text-align: left;
+}
