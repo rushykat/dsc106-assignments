@@ -1,61 +1,103 @@
 [
     {
+        "title": "Grocery Store Processing Analysis",
+        "year": "2025",
+        "image": "../images/proj1.png",
+        "description": "Whole Foods Displayed Higher Prices For All Levels of Processed Foods. This shows that customers are paying a premium even for items that are just as unhealthy. These same items can likely be bought at other stores for much cheaper."
+    },
+    {
+        "title": "Recipe Deep Dive: Analyzing and Prediction Calorie Counts",
+        "year": "2025",
+        "image": "../images/proj2.png",
+        "description": "This project analyzed a dataset of recipes that were scraped from food.com and sought to understand what types of recipes tended to be healthier and what nutritional values correlated with healthier foods. The project then used models to predict the number of calories in recipes."
+    },
+    {
+        "title": "Zen Mindfulness React App",
+        "year": "2024",
+        "image": "../images/proj3.png",
+        "description": "In this project, my group and I developed a website in React which served as a mental health and wellness app. This project had many features, such as a personality test for users to see their personality type and a journal page where users could write reflections about their mental health progress. These reflections could then be filtered and searched. These journal entries were unique to the user because of the unique login authentication that we implemented in Firebase to uniquely tie each user's reflections to their login details."
+    },
+    {
+        "title": "Voter Demographic Analysis",
+        "year": "2023",
+        "image": "../images/proj4.png",
+        "description": "In order to understand the relationship between various demographics and voting patterns, this project utilized R to analyze trends in the data relating to racial, ethnic, and gender compositions and created visualizations to display these trends. Some questions that were tackled were identifying significant non-voter communities, understanding the racial distribution of votes in the US, and how gender affects the number of voters in each state. Datasets were collected from Kaggle and merged in order to implement this analysis."
+    },
+    {
+        "title": "HCP Husky Scheduler",
+        "year": "2023",
+        "image": "../images/proj5.png",
+        "description": "As first-year students, my team felt that the course planning system we were provided was difficult to understand and navigate. As such, we developed this project to attempt to solve this issue by giving students more user-friendly tools to plan their coursework. This project had many useful features. The primary feature was the course generator page, where students could input a course title and get detailed information about what the course covers, what the pre-requisites are, and what quarters the course is offered. Additionally, we implemented a contact page where users could provide us with feedback to improve the website. Lastly, we implemented an interactive about page so that users could identify the team and upon hovering over a team member, get some insight into why they worked on this project."
+    },
+    {
         "title": "Lorem ipsum dolor sit.",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa omnis unde officia necessitatibus illum dolorem vitae, eum ipsum modi odit aliquid assumenda animi possimus repudiandae quis beatae. Rem, aut minima."
     },
     {
         "title": "Impedit, obcaecati! Distinctio, molestiae!",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Possimus dolorum soluta commodi tempora qui! Sapiente similique eum aspernatur nulla quod perferendis, dolor et magni accusamus dicta rerum fugit laudantium qui, quis accusantium quia error, vitae atque tempore porro."
     },
     {
         "title": "Deserunt natus aliquid tenetur.",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Veniam, magnam dignissimos voluptatibus repellat error sed, cumque reprehenderit pariatur tempora impedit voluptas officia autem sequi debitis quod dolorem laboriosam iusto ullam, reiciendis temporibus sapiente? Deserunt sed reprehenderit veritatis suscipit."
     },
     {
         "title": "Velit cupiditate autem excepturi!",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Inventore, aliquid labore quidem natus, repellat tenetur quia accusantium placeat distinctio quaerat rerum, cumque minus a voluptas autem impedit commodi dicta dignissimos quod adipisci corrupti dolorem. Reprehenderit accusantium ducimus facere?"
     },
     {
         "title": "Rerum pariatur id nobis?",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Nulla ut reprehenderit eaque? Cupiditate minima quas, repellendus nam facilis dolorum soluta nesciunt? Cupiditate, officia possimus maiores quam autem unde molestiae delectus temporibus mollitia eligendi nam ut facilis debitis saepe."
     },
     {
         "title": "Libero non labore quibusdam.",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Unde eos, sunt iste aspernatur ducimus blanditiis, distinctio molestiae error nemo atque at recusandae nobis cumque modi, dolorem laudantium saepe odit. Molestiae doloremque nemo temporibus ipsum? Distinctio quidem libero aperiam!"
     },
     {
         "title": "Rerum voluptate ipsa voluptas.",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Enim modi sint repudiandae atque blanditiis, iure, debitis et quasi beatae rerum laudantium voluptate soluta at odit non, aut voluptatem saepe quos! Dolorum nulla laborum id aperiam necessitatibus molestiae dolor."
     },
     {
         "title": "Labore maiores ab nihil.",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Labore, cumque consequatur. Eveniet quam labore ipsam facilis, sed cum tenetur vel, omnis laboriosam officia quibusdam rem et asperiores velit aliquam, dolor voluptatem. Quis placeat animi esse unde sint rerum."
     },
     {
         "title": "Eum non distinctio ullam?",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Enim quibusdam aliquid delectus! Facilis hic consectetur porro molestiae? Repellat odit distinctio adipisci consequatur laudantium esse aliquam corporis illo consectetur nisi qui ipsum mollitia, consequuntur obcaecati nihil ipsam, magnam enim?"
     },
     {
         "title": "Maiores alias praesentium blanditiis!",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Quae ex tenetur cumque voluptatibus. Hic rem facere ipsa blanditiis, ad eum qui obcaecati, vel dolores explicabo asperiores quidem a mollitia fugiat ex neque fuga eligendi corrupti nihil pariatur at."
     },
     {
         "title": "Enim temporibus reprehenderit tenetur?",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Explicabo libero eius odit quis fugiat! Asperiores, itaque. Quo nihil eaque assumenda, qui molestias maiores et sequi at iusto placeat consequatur ut commodi magni tenetur? Aspernatur molestias cum dignissimos laboriosam?"
     },
     {
         "title": "Dolorum, accusamus. Commodi, est!",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Dolorem labore odit, id eveniet ab, esse qui assumenda laboriosam nesciunt laudantium vitae? Consectetur accusantium non nulla esse quaerat praesentium maiores quibusdam, qui porro minus neque et eius officiis at?"
     }
