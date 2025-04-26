@@ -11,6 +11,7 @@ nav ul, nav li {
 }
 
 nav {
+    margin-top: 2em;
     display: flex;
     margin-bottom: 1em;
     border-bottom-width: 1px;
@@ -148,6 +149,11 @@ img {
     top: 1rem;
     right: 1rem;
     font-size: 0.8rem;
+    display: inline-flex;
+}
+
+.color-scheme select {
+    margin-left: 5px;
 }
 
 #profile-stats dl {
