@@ -23,6 +23,10 @@ reportWrapper.innerHTML = `
     </article>
 
 `
+// remove underline and purple hyperlink color
+reportWrapper.style.textDecoration = "none";
+reportWrapper.style.color = "inherit";
+
 document.querySelector(".projects").appendChild(reportWrapper);
 
 // console.log(projects[5]);
