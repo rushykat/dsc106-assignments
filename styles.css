@@ -101,8 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .resume section h2 {
     margin-bottom: 0.5em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid black;
+    padding-bottom: 0.3em;
+    border-bottom: 3px solid var(--color-accent);
 }
 
 .resume section > h2 {
@@ -170,4 +170,15 @@ img {
     grid-row: 2;
     margin: 0;
     text-align: left;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+}
+
+.intro img {
+    padding: 2em;
+    max-width: 300px;
+    height: auto;
 }

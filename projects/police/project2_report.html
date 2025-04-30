@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project 2 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      /* Headings */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 4</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Rushyendra Katabathuni</strong> — <em>rkatabathuni@ucsd.edu</em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: Black Americans Are Disproportionately Unfairly Treated By Police</h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="../../images/project2-for-propositon.png" alt="Plot of Total Substantiated Claims By Ethnicity" />
+          <figcaption>Black Complainants Constitute A Large Majority of Total Substantiated Claims</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>
+            The x-axis ends at the largest bar length, in order to maximize the visual differences in length between the bars.
+            This works better than extending the x-axis because it "zooms in" on the bars, making it easier for viewers to compare bars. 
+            I considered various ranges of x but settled on this because the bars are the largest at this range. Score: 1
+          </li>
+          <li>
+            Gridlines were added to more easily visually compare bar length. Initially, I didn't have gridlines, but I added them because it gives
+            viewers a sense of scale and bar size. Viewers can break down bar lengths into even pieces using the gridlines, enabling easier visual
+            comparisons. Score: 2
+          </li>
+          <li>
+            The bars are sorted in descending order to make disparities between groups easier to visualize and to understand which ethnicities file more claims.
+            Initially, I didn't sort the bars, but I settled on sorting the bars by length in descending order so that it becomes easy to identify that black complainants
+            lead by a large margin in total substantiated claims, with over 2 times more substantiated claims than the next highest group (Hispanics). The descending
+            order also gives viewers a visual order of the ethnicities, where Black Complainants lead, then Hispanic Complainants, then White Complainants, etc.  Score: 1
+          </li>
+          <li>
+            Each ethnicity has a distinct and consistent color (for both plots) to make it easier to identify ethnicities. Initially, I 
+            used distinct coloring, but I didn't make the coloring consistent. So for any plot, one ethnicity might be blue in one plot and
+            red in another plot. I created a palette to consistently color each ethnicity so that viewers could just look for colors to recognize an ethnicity instead
+            of having to constantly check the legend to see which ethnicity is which color. Score: 2
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="../../images/project2-against-proposition.png" alt="Plot of Average Substantiation Rate By Ethnicity" />
+          <figcaption>All Ethnicities Display Similar Substantiation Rates</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>
+            The y-axis goes from 0 to 1 and has a lot of white space in order to minimize the visual differences between the bars.
+            Initially, the y-axis only went from 0 to 0.4. At this range of y, the bars appeared somewhat close in height, but the
+            differences were much more obvious. I settled on 1 as the high end of the range because a percent higher than 1 doesn't
+            make sense. Additionally, at this level, the bars appeared relatively similar in height or at least similar enough to claim that
+            the substantiation rates were close for all ethnicities. Score: -2
+          </li>
+          <li>
+            Each ethnicity has a distinct and consistent color (for both plots) for easy identification and visual clarity. Instead of
+            confusing viewers by using different colors (for each ethnicity) in this plot than the For Proposition plot, I settled on using a
+            palette to give each ethnicity a consistent color. Score: 2
+          </li>
+          <li>
+            The bars are not organized in any order, making visual comparisons of bars (especially bars that aren't next to each other)
+            more difficult. I considered sorting them, but realized that this would help viewers notice small differences in bar heights and 
+            enable them to identify the ordering, which in turn would remove some of the guesswork with estimating bar height differences.
+            If I told the viewers the bars were sorted, then they would be able to tell which bar is greater than another due to the sorted ordering. Score: -0.5
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>
+          For both the Against and For plots, I would say that the design process was generally straightforward. I was able to apply a lot of the
+          visual encoding guidelines from class to ensure that the plots were easy to understand for viewers. For example, consistent, discrete color
+          encodings for variables is something that I made sure to apply in both of my plots to increase readability. I didn't want to blatantly confuse 
+          viewers by changing the colors of the ethnicities between plots. What I found challenging in this assignment was being subtly deceptive without
+          misrepresenting the data. For example, in the For Proposition plot, setting the right x-axis range to essentially "zoom in" and highlight the difference in total Black
+          Complainant Claims vs. all other Complainant Claims was simple. On the other hand, setting the y-axis in the Against plot was more challenging because
+          it took some adjusting to see at what point I felt like the differences between the bar heights was being masked/hidden. I could have easily chosen
+          the y-axis to extend to 10, in which case every bar would look very small, however this would defeat the purpose of a visualization. It
+          was surprising to me that it felt difficult to find that balance where the visualization deceptively hid trends while not being obvious to viewers.
+        </p>
+        <p>
+          I would define an ethical analysis and visualization as a commitment to fairly represent data without modifying it to display trends
+          that are not seen in the data. In my For plot, I embodied ethical visualization by using clear and distinct color encodings for each ethnicity,
+          gridlines for easier visual bar length comparisons, and organizing the bars by length to help viewers make comparisons and gain an
+          understanding of the ordering. On the other hand, I would say I did not embody ethical visualization in my Against plot by not organizing the
+          bars and extending the y-axis to a length that made the bar lengths appear more similar and not adding gridlines to make visual comparisons
+          between bars more difficult. In that vain, I would say that "acceptable" persuasion are design choices that improve the clarity and
+          readability of the plot, through methods such as clear color encoding and labeling as well as x and y axes that are reasonably bounded.
+          On the other hand, "misleading" persuasion are design choices that attempt to hide or minimize differences and trends in a visualization, such
+          as using misleading axes or using similar colors/color gradients. 
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -30,6 +30,12 @@
         "description": "As first-year students, my team felt that the course planning system we were provided was difficult to understand and navigate. As such, we developed this project to attempt to solve this issue by giving students more user-friendly tools to plan their coursework. This project had many useful features. The primary feature was the course generator page, where students could input a course title and get detailed information about what the course covers, what the pre-requisites are, and what quarters the course is offered. Additionally, we implemented a contact page where users could provide us with feedback to improve the website. Lastly, we implemented an interactive about page so that users could identify the team and upon hovering over a team member, get some insight into why they worked on this project."
     },
     {
+        "title": "Persuasive/Deceptive Visualization",
+        "year": "2025",
+        "image": "../images/project2-for-propositon.png",
+        "description": "Creating persuasive/deceptive visualizations based on a dataset."
+    },
+    {
         "title": "Lorem ipsum dolor sit.",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
