@@ -182,3 +182,65 @@ img {
     max-width: 300px;
     height: auto;
 }
+
+.proj-desc p:nth-child(2) {
+    font-family: Baskerville;
+    font-variant-numeric: oldstyle-nums;
+}
+
+#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+
+    overflow: visible;
+
+}
+
+.legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+    gap: 0.5em;
+    flex: 1;
+    border: 2px solid var(--color-accent);
+    padding-left: 0;
+    margin-left: 30px;
+}
+
+.legend-li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 5px;
+    margin-right: -500px;
+}
+
+.swatch {
+    width: 1.5em;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color);
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+&:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+}
+
+path {
+    transition: 300ms;
+}
+
+.selected {
+    --color: oklch(60% 45% 0) !important;
+
+    &:is(path) {
+        fill: var(--color);
+    }
+}
