@@ -27,8 +27,9 @@ reportWrapper.innerHTML = `
 // remove underline, purple hyperlink color for project 2 report add to report
 reportWrapper.style.textDecoration = "none";
 reportWrapper.style.color = "inherit";
-
 document.querySelector(".projects").appendChild(reportWrapper);
+
+let selectedIndex = -1;
 
 function renderPieChart(projectsGiven) {
     // reshapes project data
@@ -54,14 +55,38 @@ function renderPieChart(projectsGiven) {
     let svg = d3.select("svg");
     svg.selectAll("path").remove();
 
-    // adds each pie slice to svg element
-    arcs.forEach((arc, idx) => {
-        d3.select("svg").append("path").attr("d", arc).attr("fill", colors(idx));
-    })
-
     // clear legend
     let legend = d3.select(".legend");
     legend.selectAll("*").remove();
+
+    // adds each pie slice to svg element
+    arcs.forEach((arc, idx) => {
+        // add slices and on slice click functionality
+        svg.append("path").attr("d", arc).attr("fill", colors(idx)).on("click", () => {
+            selectedIndex = selectedIndex === idx ? -1 : idx;
+
+            // find slice and attach selected class
+            svg.selectAll("path").attr("class", (_, idx) => (
+                idx === selectedIndex ? "selected" : null
+            ));
+
+            // find matching legend element and attach selected class
+            legend.selectAll(".legend-li").attr("class", (_, idx) => (
+                idx === selectedIndex ? "legend-li selected" : "legend-li"
+            ));
+
+            // if no slice selected, render all given projects
+            if (selectedIndex === -1) {
+                renderProjects(projectsGiven, projectsContainer, "h2");
+            // else filter out selected projects and render
+            } else {
+                let filteredProj = projectsGiven.filter(
+                    proj => proj.year === data[selectedIndex].label
+                );
+                renderProjects(filteredProj, projectsContainer, "h2");
+            }
+        });
+    })
 
     // adds legend for pie chart
     data.forEach((d, idx) => {
@@ -94,29 +119,3 @@ searchInput.addEventListener("input", (event) => {
     // render filtered pie chart
     renderPieChart(filteredProjects);
 });
-
-
-
-
-
-
-// function renderPieChart(projectsGiven) {
-//     // reshapes project data
-//     let rolledData = d3.rollups(
-//         projectsGiven,
-//         (v) => v.length,
-//         (d) => d.year,
-//     );
-
-//     // initializes data for pie chart
-//     let data = rolledData.map(([year, count]) => {
-//         return { value: count, label: year};
-//     });
-
-//     // pie chart creation
-//     let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-//     let sliceGenerator = d3.pie().value((d) => d.value);
-//     let arcData = sliceGenerator(data);
-//     let arcs = arcData.map((d) => arcGenerator(d));
-//     let colors = d3.scaleOrdinal(d3.schemeTableau10);
-// }
