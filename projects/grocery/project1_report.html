@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSC 106 Project 1 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+      }
+
+      figure > figcaption {
+        font: 500 75% var(--font-sans);
+        background: var(--color-neutral-95);
+        padding: 0.5rem;
+        margin: -0.5rem;
+        margin-top: 0.5rem;
+        counter-increment: figure;
+        text-align: left;
+      }
+
+      figure > figcaption::before {
+        content: 'Figure ' counter(figure) ': ';
+        font-weight: bold;
+        color: var(--color-neutral-40);
+      }
+
+      a.back-btn {
+        display: inline-block;
+        margin: 1em 0;
+        color: var(--color-neutral-40);
+        text-decoration: none;
+        border: 1px solid var(--color-neutral-80);
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back-btn" href="../index.html">Back to Projects</a>
+    <header>
+      <h1>DSC 106 Project 1 Report</h1>
+      <p><strong>Rushyendra Katabathuni</strong> &mdash; <em>PID: A18545015</em></p>
+    </header>
+    <main>
+        <section>
+            <img src="../../images/proj1.png" alt="Plot of Average Meal Prices Grouped by Store and Food Processing Level">
+        </section>
+        <section>
+            <h2>Main Takeaway</h2>
+            <p>
+            Whole Foods has consistently higher average prices in all food processing levels, even in highly processed foods, while Walmart is the
+            cheapest and Target is somewhere in the middle. Whole Foods shoppers realize that they are paying a premium for food at Whole Foods.
+            In return, the expectation is that the food they purchase is much healthier and less processed. However, I think it would surprise people
+            to see that Whole Foods is charging their customers noticeably more than Target and Walmart even for the unhealthy foods that they stock.
+            In summary, Whole Foods is charging its shoppers extra no matter the food processing category, when the expectation would be that shoppers
+            are only paying a premium for their healthier options.
+            </p>
+        </section>
+        <section>
+            <h2>Visualization Design Decisions</h2>
+            <p>
+            To best represent this takeaway, I chose to group the data by the Food Processing Class (FPro_class) and Store (store). I then calculated
+            the average for each store at each processing level. I chose a barplot to represent this because it allows for easy visual comparisons
+            between the average prices of the stores and processing levels.
+            </p>
+            <ul>
+                <li>
+                    <strong>Grouped Bars by Processing Level:</strong> Bars are grouped by processing class so that within one class, viewers can compare
+                    each store directly.
+                </li>
+                <li>
+                    <strong>Consistent Store Colors:</strong> Each store uses its brand color (blue for Walmart, red for Target, green for Whole Foods) to
+                    help viewers quickly identify stores across categories.
+                </li>
+                <li>
+                    <strong>Gridlines Added:</strong> Light gridlines improve perspective and make comparisons of bar heights easier for viewers.
+                </li>
+                <li>
+                    <strong>Uniform Axis Scale:</strong> Bars start at the same baseline and use a standard scale because no bars dominate the range,
+                    preserving visibility of all differences.
+                </li>
+                <li>
+                    <strong>Ordered Bars:</strong> Within each processing class, bars are ordered Walmart, Target, Whole Foods to highlight the
+                    consistent price increase across stores.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Obscured Data Acknowledgment</h2>
+            <p>
+            Using mean prices obscures the underlying distribution of data. Readers cannot see how many items contribute to each average or the
+            variance in prices (e.g., whether the ultra-processed category at Walmart is based on 3,000 items or just 30). This trade-off simplifies
+            comparison at the cost of distributional insight.
+            </p>
+        </section>
+    </main>
+  </body>
+</html>

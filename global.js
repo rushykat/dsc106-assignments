@@ -101,26 +101,57 @@ export async function fetchJSON(url) {
     }
 }
 
+// export function renderProjects(project, containerElement, headingLevel = "h2") {
+//     if (!containerElement) {
+//         return;
+//     }
+//     containerElement.innerHTML = "";
+//     for (let proj of project) {
+//         const article = document.createElement("article");
+//         const title = proj?.title;
+//         const image = proj?.image;
+//         const description = proj?.description;
+//         const year = proj?.year;
+//         article.innerHTML = `
+//             <${headingLevel}>${title}</${headingLevel}>
+//             <img src="${image}" alt="${title}">
+//             <div class="proj-desc">
+//                 <p>${description}</p>
+//                 <p>c. ${year}</p>
+//             </div>
+//         `;
+//         containerElement.appendChild(article);
+//     }
+// }
+
 export function renderProjects(project, containerElement, headingLevel = "h2") {
     if (!containerElement) {
         return;
     }
+
     containerElement.innerHTML = "";
     for (let proj of project) {
-        const article = document.createElement("article");
+        const projWrapper = document.createElement("a");
         const title = proj?.title;
         const image = proj?.image;
         const description = proj?.description;
         const year = proj?.year;
-        article.innerHTML = `
-            <${headingLevel}>${title}</${headingLevel}>
-            <img src="${image}" alt="${title}">
-            <div class="proj-desc">
-                <p>${description}</p>
-                <p>c. ${year}</p>
-            </div>
+        projWrapper.href = proj?.link;
+        projWrapper.target = "_blank";
+        projWrapper.innerHTML = `
+            <article>
+                <${headingLevel}>${title}</${headingLevel}>
+                <img src="${image}" alt="${title}">
+                <div class="proj-desc">
+                    <p>${description}</p>
+                    <p>c. ${year}</p>
+                </div>
+            </article>
         `;
-        containerElement.appendChild(article);
+        projWrapper.style.textDecoration = "none";
+        projWrapper.style.color = "inherit";
+
+        containerElement.appendChild(projWrapper);
     }
 }
 

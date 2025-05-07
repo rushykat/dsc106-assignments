@@ -12,23 +12,6 @@ projectTitle.innerHTML = `
     ${projects.length} Projects
 `;
 
-// adding link for project 2 report clickable from projects page
-const reportWrapper = document.createElement("a");
-reportWrapper.href = `./police/project2_report.html`;
-const p = projects[5];
-reportWrapper.innerHTML = `
-    <article>
-        <h3>${p.title}</h3>
-        <img src="${p.image}">
-        <p>${p.description}</p>
-    </article>
-
-`
-// remove underline, purple hyperlink color for project 2 report add to report
-reportWrapper.style.textDecoration = "none";
-reportWrapper.style.color = "inherit";
-document.querySelector(".projects").appendChild(reportWrapper);
-
 let selectedIndex = -1;
 
 function renderPieChart(projectsGiven) {

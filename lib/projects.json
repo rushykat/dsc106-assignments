@@ -1,39 +1,52 @@
 [
     {
+        "title": "Persuasive/Deceptive Visualization",
+        "year": "2025",
+        "image": "../images/project2-for-propositon.png",
+        "link": "./police/project2_report.html",
+        "description": "Developed Persuasive visualizations based on the premise of identifying if Black Americans are disproportionately unfairly treated by police. One visualization was designed to guide viewers into supporting the proposition that Black Americans lead in substantiated claims by a large margin. The second visualization supported the proposition that all ethnicities display similar substantiation rates. The goal of this assignment was to use deceptive design decisions to support opposing claims."
+    },
+    {
         "title": "Grocery Store Processing Analysis",
         "year": "2025",
         "image": "../images/proj1.png",
+        "link": "./grocery/project1_report.html",
         "description": "Whole Foods Displayed Higher Prices For All Levels of Processed Foods. This shows that customers are paying a premium even for items that are just as unhealthy. These same items can likely be bought at other stores for much cheaper."
     },
     {
         "title": "Recipe Deep Dive: Analyzing and Prediction Calorie Counts",
         "year": "2025",
         "image": "../images/proj2.png",
+        "link": "https://rushykat.github.io/recipe-calorie-analysis-and-prediction/",
         "description": "This project analyzed a dataset of recipes that were scraped from food.com and sought to understand what types of recipes tended to be healthier and what nutritional values correlated with healthier foods. The project then used models to predict the number of calories in recipes."
     },
     {
         "title": "Zen Mindfulness React App",
         "year": "2024",
         "image": "../images/proj3.png",
+        "link": "https://github.com/rushykat/Zen-Mindfulness",
         "description": "In this project, my group and I developed a website in React which served as a mental health and wellness app. This project had many features, such as a personality test for users to see their personality type and a journal page where users could write reflections about their mental health progress. These reflections could then be filtered and searched. These journal entries were unique to the user because of the unique login authentication that we implemented in Firebase to uniquely tie each user's reflections to their login details."
+    },
+    {
+        "title": "Vaccine Scheduler",
+        "year": "2024",
+        "image": "../images/proj6.png",
+        "link": "https://github.com/rushykat/Vaccine-Scheduler",
+        "description": "This project mimics a Vaccine Scheduling Program. Users are able to open the program as either a patient or a caregiver, based on which they will have different options available to them. Patients and Caregivers can create unique login credentials. Once logged in, patients can then search caregiver avaialabilities, see what vaccines are available, and schedule and cancel appointments. Caregivers are able to upload and update their availabilities, view their appointments, and add doses of vaccines. All collected data are securely stored in a Microsoft Azure database."
     },
     {
         "title": "Voter Demographic Analysis",
         "year": "2023",
         "image": "../images/proj4.png",
+        "link": "https://github.com/rushykat/voter-demographic-analysis",
         "description": "In order to understand the relationship between various demographics and voting patterns, this project utilized R to analyze trends in the data relating to racial, ethnic, and gender compositions and created visualizations to display these trends. Some questions that were tackled were identifying significant non-voter communities, understanding the racial distribution of votes in the US, and how gender affects the number of voters in each state. Datasets were collected from Kaggle and merged in order to implement this analysis."
     },
     {
         "title": "HCP Husky Scheduler",
         "year": "2023",
         "image": "../images/proj5.png",
+        "link": "https://github.com/rushykat/original-husky-scheduler",
         "description": "As first-year students, my team felt that the course planning system we were provided was difficult to understand and navigate. As such, we developed this project to attempt to solve this issue by giving students more user-friendly tools to plan their coursework. This project had many useful features. The primary feature was the course generator page, where students could input a course title and get detailed information about what the course covers, what the pre-requisites are, and what quarters the course is offered. Additionally, we implemented a contact page where users could provide us with feedback to improve the website. Lastly, we implemented an interactive about page so that users could identify the team and upon hovering over a team member, get some insight into why they worked on this project."
-    },
-    {
-        "title": "Persuasive/Deceptive Visualization",
-        "year": "2025",
-        "image": "../images/project2-for-propositon.png",
-        "description": "Developed Persuasive visualizations based on the premise of identifying if Black Americans are disproportionately unfairly treated by police. One visualization was designed to guide viewers into supporting the proposition that Black Americans lead in substantiated claims by a large margin. The second visualization supported the proposition that all ethnicities display similar substantiation rates. The goal of this assignment was to use deceptive design decisions to support opposing claims."
     },
     {
         "title": "Lorem ipsum dolor sit.",
