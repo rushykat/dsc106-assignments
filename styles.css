@@ -249,3 +249,81 @@ path {
         fill: var(--color);
     }
 }
+
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+  
+circle:hover {
+    transform: scale(1.5);
+}
+
+dl.info {
+    /* ... other styles ... */
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+}
+  
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes marching-ants {
+    to {
+      stroke-dashoffset: -8; /* 5 + 3 */
+    }
+}
+  
+.selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+    fill: #ff6b6b;
+}
+
+.gridlines line {
+    opacity: 0.3;
+}
+
+.gridlines path {
+    display: none;
+}
+
+dl.stats, dl.info {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 0.25em 1em;
+    margin: 0;
+    padding: 0;
+}
+
+dl.stats {
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+dl.stats dt {
+    font-size: 0.9rem;
+    color: var(--color-neutral-40);
+    font-weight: 500;
+    align-self: start;
+}
+
+.tooltip {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 1em 1em;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
