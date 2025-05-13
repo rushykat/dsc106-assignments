@@ -137,7 +137,7 @@ export function renderProjects(project, containerElement, headingLevel = "h2") {
         const image = proj?.image;
         const description = proj?.description;
         const year = proj?.year;
-        projWrapper.href = proj?.link;
+        projWrapper.href = BASE_PATH + proj?.link;
         projWrapper.target = "_blank";
         projWrapper.innerHTML = `
             <article>
