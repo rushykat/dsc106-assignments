@@ -1,5 +1,12 @@
 [
     {
+        "title": "Bike Watchers",
+        "year": "2025",
+        "image": "../images/bike.png",
+        "link": "https://rushykat.github.io/bike-traffic-map/",
+        "description": "This project visualizes bike traffic in Boston, MA. The goal of this project was to create a map that allows users to understand how bike traffic changes over time."
+    },
+    {
         "title": "Persuasive/Deceptive Visualization",
         "year": "2025",
         "image": "../images/project2-for-propositon.png",
