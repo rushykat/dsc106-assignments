@@ -130,6 +130,9 @@ export function renderProjects(project, containerElement, headingLevel = "h2") {
         return;
     }
 
+    const isAbsolute = url => /^[a-z][a-z0-9.+-]*:|^\/\//i.test(url);
+
+
     containerElement.innerHTML = "";
     for (let proj of project) {
         const projWrapper = document.createElement("a");
@@ -137,8 +140,12 @@ export function renderProjects(project, containerElement, headingLevel = "h2") {
         const image = proj?.image;
         const description = proj?.description;
         const year = proj?.year;
-        projWrapper.href = BASE_PATH + proj?.link;
-        projWrapper.target = "_blank";
+        // projWrapper.href = BASE_PATH + proj?.link;
+        // projWrapper.target = "_blank";
+
+        projWrapper.href = isAbsolute(proj?.link) ? proj?.link : BASE_PATH + proj?.link;
+        projWrapper.target = isAbsolute(proj?.link) ? "_blank" : "_self";
+        projWrapper.rel = isAbsolute(proj?.link) ? "noopener noreferrer" : "";
         projWrapper.innerHTML = `
             <article>
                 <${headingLevel}>${title}</${headingLevel}>
