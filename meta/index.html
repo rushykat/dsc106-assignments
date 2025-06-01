@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meta</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css" />
     <script type="module" src="../global.js"></script>
     <script type="module" src="./main.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Meta</h1>
-    <p>This page includes stats about the code of this website.</p>    
+    <p>This page includes stats about the code of this website.</p>
     <div id="stats"></div>
 
-    <h2>Commits by time of day</h2>
-    <div id="chart"></div>
+    <div id="commit-container">
+      <label>
+        Show commits until:
+        <input id="commit-slider" type="range" min="0" max="100" value="-1" />
+        <time id="selected-commit-time"></time>
+      </label>
+    </div>
+    <div id="scrolly-1">
+      <div id="scatter-story">some filler text here</div>
+      <div id="scatter-plot">
+        <h2>Commits by time of day</h2>
+        <div id="chart"></div>
 
-    <dl id="commit-tooltip" class="info tooltip" hidden>
-        <dt>Commit</dt>
-        <dd>
-          <a href="" id="commit-link" target="_blank"></a>
-        </dd>
-      
-        <dt>Date</dt>
-        <dd id="commit-date"></dd>
-      
-        <!-- Add: Time, author, lines edited -->
-    </dl>
+        <dl id="commit-tooltip" class="info tooltip" hidden>
+          <dt>Commit</dt>
+          <dd>
+            <a href="" id="commit-link" target="_blank"></a>
+          </dd>
 
-    <p id="selection-count">No commits selected</p>
-    <dl id="language-breakdown" class="stats"></dl>
-</body>
+          <dt>Date</dt>
+          <dd id="commit-date"></dd>
+
+          <!-- Add: Time, author, lines edited -->
+        </dl>
+
+        <p id="selection-count">No commits selected</p>
+        <dl id="language-breakdown" class="stats"></dl>
+      </div>
+    </div>
+
+    <div id="scrolly-2">
+      <div id="file-plot">
+        <dl id="files"></dl>
+      </div>
+      <div id="file-story"></div>
+    </div>
+  </body>
 </html>
